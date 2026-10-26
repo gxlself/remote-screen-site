@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1500" width="2000" height="1500">
+  <!-- 示意图：iPad 分屏，左边一台 Mac、右边一台 Windows。不是实际截图。 -->
+  <defs>
+    <clipPath id="scr"><rect x="70" y="70" width="1860" height="1360" rx="38"/></clipPath>
+    <clipPath id="l"><rect x="86" y="86" width="910" height="1328" rx="26"/></clipPath>
+    <clipPath id="r"><rect x="1004" y="86" width="910" height="1328" rx="26"/></clipPath>
+  </defs>
+  <rect x="20" y="20" width="1960" height="1460" rx="86" fill="#1c1f24"/>
+  <rect x="22" y="22" width="1956" height="1456" rx="84" fill="none" stroke="#3a3f47" stroke-width="3"/>
+  <g clip-path="url(#scr)">
+    <rect x="70" y="70" width="1860" height="1360" fill="#0b0d10"/>
+    <!-- 左：Mac -->
+    <g clip-path="url(#l)">
+      <rect x="86" y="86" width="910" height="1328" fill="#2c3946"/>
+      <rect x="86" y="86" width="910" height="34" fill="#1b2129" opacity=".85"/>
+      <rect x="112" y="98" width="12" height="12" rx="3" fill="#e9edf1"/>
+      <rect x="140" y="98" width="56" height="10" rx="5" fill="#e9edf1" opacity=".8"/>
+      <rect x="210" y="98" width="40" height="10" rx="5" fill="#e9edf1" opacity=".5"/>
+      <rect x="160" y="250" width="760" height="560" rx="14" fill="#151a20"/>
+      <rect x="160" y="250" width="760" height="46" rx="14" fill="#20262e"/>
+      <rect x="160" y="282" width="760" height="14" fill="#20262e"/>
+      <circle cx="188" cy="273" r="7" fill="#5b636e"/><circle cx="210" cy="273" r="7" fill="#5b636e"/><circle cx="232" cy="273" r="7" fill="#5b636e"/>
+      <g opacity=".8">
+        <rect x="200" y="330" width="200" height="12" rx="6" fill="#9cc4a4"/>
+        <rect x="200" y="364" width="420" height="12" rx="6" fill="#e9edf1" opacity=".45"/>
+        <rect x="200" y="398" width="360" height="12" rx="6" fill="#e9edf1" opacity=".45"/>
+        <rect x="200" y="432" width="240" height="12" rx="6" fill="#8fb3d9"/>
+        <rect x="200" y="466" width="480" height="12" rx="6" fill="#e9edf1" opacity=".45"/>
+        <rect x="200" y="500" width="300" height="12" rx="6" fill="#e9edf1" opacity=".45"/>
+        <rect x="200" y="534" width="180" height="12" rx="6" fill="#c9a96e"/>
+        <rect x="200" y="568" width="400" height="12" rx="6" fill="#e9edf1" opacity=".45"/>
+      </g>
+      <rect x="300" y="1310" width="480" height="76" rx="22" fill="#e9edf1" opacity=".16"/>
+      <g fill="#e9edf1" opacity=".55">
+        <rect x="322" y="1324" width="48" height="48" rx="12"/><rect x="384" y="1324" width="48" height="48" rx="12"/>
+        <rect x="446" y="1324" width="48" height="48" rx="12"/><rect x="508" y="1324" width="48" height="48" rx="12"/>
+        <rect x="570" y="1324" width="48" height="48" rx="12"/><rect x="632" y="1324" width="48" height="48" rx="12"/>
+        <rect x="694" y="1324" width="48" height="48" rx="12"/>
+      </g>
+    </g>
+    <!-- 右：Windows -->
+    <g clip-path="url(#r)">
+      <rect x="1004" y="86" width="910" height="1328" fill="#1f3a5a"/>
+      <rect x="1080" y="220" width="760" height="620" rx="10" fill="#f3f4f6"/>
+      <rect x="1080" y="220" width="760" height="48" rx="10" fill="#e4e7eb"/>
+      <rect x="1080" y="258" width="760" height="10" fill="#e4e7eb"/>
+      <rect x="1740" y="238" width="18" height="3" fill="#596270"/><rect x="1772" y="232" width="14" height="14" fill="none" stroke="#596270" stroke-width="2"/>
+      <path d="M1802 233 l13 13 M1815 233 l-13 13" stroke="#596270" stroke-width="2"/>
+      <rect x="1080" y="268" width="200" height="572" fill="#e9ecf0"/>
+      <g fill="#2b323b" opacity=".35">
+        <rect x="1104" y="300" width="130" height="12" rx="6"/><rect x="1104" y="336" width="100" height="12" rx="6"/>
+        <rect x="1104" y="372" width="140" height="12" rx="6"/><rect x="1104" y="408" width="90" height="12" rx="6"/>
+      </g>
+      <g fill="#2b323b" opacity=".25">
+        <rect x="1310" y="300" width="80" height="80" rx="8"/><rect x="1410" y="300" width="80" height="80" rx="8"/>
+        <rect x="1510" y="300" width="80" height="80" rx="8"/><rect x="1610" y="300" width="80" height="80" rx="8"/>
+        <rect x="1310" y="420" width="80" height="80" rx="8"/><rect x="1410" y="420" width="80" height="80" rx="8"/>
+        <rect x="1510" y="420" width="80" height="80" rx="8"/>
+      </g>
+      <!-- 任务栏 -->
+      <rect x="1004" y="1350" width="910" height="64" fill="#e9edf1" opacity=".18"/>
+      <g fill="#e9edf1" opacity=".7">
+        <rect x="1320" y="1366" width="14" height="14"/><rect x="1338" y="1366" width="14" height="14"/>
+        <rect x="1320" y="1384" width="14" height="14"/><rect x="1338" y="1384" width="14" height="14"/>
+      </g>
+      <g fill="#e9edf1" opacity=".45">
+        <rect x="1380" y="1364" width="36" height="36" rx="8"/><rect x="1430" y="1364" width="36" height="36" rx="8"/>
+        <rect x="1480" y="1364" width="36" height="36" rx="8"/><rect x="1530" y="1364" width="36" height="36" rx="8"/>
+      </g>
+      <rect x="1780" y="1376" width="100" height="12" rx="6" fill="#e9edf1" opacity=".5"/>
+      <path d="M1600 640 l0 52 l13 -12 l9 22 l10 -4 l-9 -22 l17 0 z" fill="#ffffff" stroke="#101418" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <!-- 分屏分隔条 -->
+    <rect x="994" y="720" width="12" height="60" rx="6" fill="#5b636e"/>
+    <rect x="102" y="1240" width="240" height="44" rx="22" fill="#0e1114" opacity=".7"/>
+    <text x="222" y="1270" text-anchor="middle" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif" font-size="22" fill="#e9edf1">示意图 · 非实际截图</text>
+  </g>
+  <circle cx="1000" cy="45" r="7" fill="#2b3037"/>
+</svg>

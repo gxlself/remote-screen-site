@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>远屏 Remote Screen</title>
+  <meta name="description" content="在 iPad 和 iPhone 上远程控制你自己的 Mac 和 Windows 电脑。用系统自带的屏幕共享和远程桌面，电脑上不用装软件；内置 tailnet，外网也能连回来。">
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbfbfc" media="(prefers-color-scheme: light)">
+  <meta property="og:title" content="远屏 Remote Screen">
+  <meta property="og:description" content="在 iPad 和 iPhone 上远程控制你自己的 Mac 和 Windows 电脑。">
+  <meta property="og:image" content="assets/icon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="26" height="26">远屏</a>
+      <ul>
+        <li class="hide-sm"><a href="#features">功能</a></li>
+        <li class="hide-sm"><a href="#ipad">iPad</a></li>
+        <li><a href="privacy.html">隐私</a></li>
+        <li><a href="support.html">支持</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <img class="app-icon" src="assets/icon-512.png" alt="远屏 App 图标" width="104" height="104">
+        <h1>远屏<span class="en">Remote Screen</span></h1>
+        <p class="lead">在 iPad 和 iPhone 上，用你自己的 Mac 和 Windows 电脑。电脑上不用装软件，在外面也能连回家里和公司。</p>
+        <div class="hero-cta">
+          <!-- App 尚未上架：上架后把 href="#" 替换为 App Store 链接（https://apps.apple.com/app/id<App ID>）。 -->
+          <a class="btn-store" href="#" aria-label="在 App Store 下载（即将上架）">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V3zM5 19h14v2H5z"/></svg>
+            <span><small>即将上架</small>App Store</span>
+          </a>
+          <a class="link-arrow" href="#faq">怎么开始</a>
+        </div>
+        <figure class="shot hero-shot">
+          <img src="assets/screens/ipad-1.png" width="2000" height="1500" alt="iPad 上显示一台 Mac 的桌面">
+          <figcaption>画面为示意</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">No install</p>
+          <h2>电脑上什么都不用装。</h2>
+          <p class="lead">远屏直接连接电脑系统自带的远程功能。打开一个开关，就能从 iPad 或 iPhone 连上去。</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <span class="tag">macOS · VNC</span>
+            <h3>Mac：系统自带的「屏幕共享」</h3>
+            <p>在 Mac 的共享设置里打开屏幕共享，用这台 Mac 的用户名和登录密码就能连接。同一网络里打开了屏幕共享的 Mac，App 会自动找到。</p>
+          </article>
+          <article class="card">
+            <span class="tag">Windows · RDP</span>
+            <h3>Windows：系统自带的「远程桌面」</h3>
+            <p>在 Windows 设置里打开远程桌面，用 Windows 账户和密码登录。支持播放电脑的声音。</p>
+          </article>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <span class="tag">Optional · Remote Host</span>
+          <h3>想要更好的画质，可以装 Remote Host</h3>
+          <p>Remote Host 是可选的电脑端程序，有 Mac 和 Windows 版。装上以后，远屏改用自己的协议连接，多出这些能力：</p>
+          <ul class="list">
+            <li><b>更清晰、更跟手</b> — 电脑用显卡硬件做 HEVC 低延迟编码，经 QUIC 传输。</li>
+            <li><b>多显示器与虚拟屏</b> — 选看任意一块显示器，也可以按 iPad 屏幕尺寸新建一块虚拟屏。</li>
+            <li><b>声音与文件</b> — 播放电脑的声音，在手机和电脑之间收发文件。</li>
+            <li><b>扫码配对</b> — 用相机扫电脑屏幕上的二维码完成配对，之后用设备密钥互相认证。</li>
+            <li><b>观看模式</b> — 只看不控，回到主屏幕后还能用画中画小窗继续看。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="anywhere">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Tailnet</p>
+            <h2>在外面，也能连回来。</h2>
+            <p class="lead">远屏内置 Tailscale / Headscale 组网。电脑和 iPad 加入同一个 tailnet，就能像在同一个局域网里一样连接，不用在路由器上做端口转发。</p>
+            <ul class="list">
+              <li><b>手机上的 Tailscale</b> — 已经在用 Tailscale App，直接沿用。</li>
+              <li><b>App 内连接</b> — 填你的 Headscale 地址，在浏览器里登录，不必另装 VPN App。</li>
+              <li><b>自动</b> — Tailscale App 连着时用它；它断了，就自动改用 App 内连接。</li>
+            </ul>
+          </div>
+          <figure class="shot shot-phone">
+            <img src="assets/screens/iphone-1.png" width="900" height="1840" alt="iPhone 上的电脑列表">
+            <figcaption>画面为示意</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ipad">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">iPad</p>
+          <h2>为 iPad 做的远程桌面。</h2>
+          <p class="lead">接上键盘和触控板，iPad 就像一台连着那台电脑的显示器。</p>
+        </div>
+        <figure class="shot" style="margin-bottom:48px">
+          <img src="assets/screens/ipad-2.png" width="2000" height="1500" alt="iPad 分屏，左边一台 Mac，右边一台 Windows 电脑">
+          <figcaption>画面为示意</figcaption>
+        </figure>
+        <div class="features">
+          <div class="feature">
+            <h3>外接键盘全键位直通</h3>
+            <p>按键和快捷键直接发给电脑。少数会被 iPadOS 拦下的组合，比如 Command-Tab、Command-空格、Alt-Tab，工具栏里点一下就能发过去。</p>
+          </div>
+          <div class="feature">
+            <h3>触控板和鼠标指针</h3>
+            <p>用触控板或鼠标操作电脑上的指针。全屏时可以锁定指针，像在电脑前一样移动。</p>
+          </div>
+          <div class="feature">
+            <h3>多个窗口，分屏看两台</h3>
+            <p>每台电脑可以单独占一个系统窗口。用分屏把两台电脑并排放，一边看一边操作。</p>
+          </div>
+          <div class="feature">
+            <h3>三指左右滑，切换电脑</h3>
+            <p>同时连着几台电脑时，三指左右滑动在它们之间切换，就像 Mac 上的多个桌面。</p>
+          </div>
+          <div class="feature">
+            <h3>多显示器选择</h3>
+            <p>电脑接了几块屏，就能选看哪一块。</p>
+          </div>
+          <div class="feature">
+            <h3>iPhone 也能用</h3>
+            <p>同一个 App 支持 iPhone，临时处理一下事情也方便。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="more">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">More</p>
+          <h2>不止看屏幕。</h2>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>SSH 终端</h3>
+            <p>直接打开电脑或服务器的命令行，支持在 App 里管理 SSH 密钥。</p>
+          </article>
+          <article class="card">
+            <h3>剪贴板同步</h3>
+            <p>电脑上复制的内容同步到手机；手机上的文字可以发到电脑粘贴，不能粘贴的登录框也能「粘贴为键入」。</p>
+          </article>
+          <article class="card">
+            <h3>电脑的声音</h3>
+            <p>通过远程桌面或 Remote Host 连接时，可以在 iPad 上播放电脑的声音。</p>
+          </article>
+          <article class="card">
+            <h3>画中画</h3>
+            <p>在观看模式下回到主屏幕，用小窗继续看电脑的画面。</p>
+          </article>
+          <article class="card">
+            <h3>会话录制</h3>
+            <p>把一次远程会话录下来，加密保存在这台设备上，可以回放和导出。</p>
+          </article>
+          <article class="card">
+            <h3>Face ID 锁</h3>
+            <p>可以设置用 Face ID 解锁 App。锁定时不显示远端画面，验证只在设备上完成。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section promise" id="privacy">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Privacy</p>
+          <h2>你的电脑，只连你的设备。</h2>
+        </div>
+        <ul class="promise-list">
+          <li>
+            <h3>不经过开发者的服务器</h3>
+            <p>画面、键盘鼠标、剪贴板和声音直接在你的设备和电脑之间传输。开发者不运营任何接收这些数据的服务器。</p>
+          </li>
+          <li>
+            <h3>密码和密钥留在钥匙串</h3>
+            <p>记住的密码和 API 令牌存在系统钥匙串里，不同步到其他设备。设备身份密钥和 SSH 私钥在支持的设备上由安全隔区保管，不离开这台设备。</p>
+          </li>
+          <li>
+            <h3>没有账号，没有统计</h3>
+            <p>不用注册，不含广告和第三方统计 SDK。日志和崩溃记录只存在本机，除非你自己导出分享。</p>
+          </li>
+        </ul>
+        <p style="margin-top:40px"><a class="link-arrow" href="privacy.html">阅读完整的隐私政策</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>怎么在 Mac 上打开屏幕共享？</summary>
+            <div class="answer">
+              <ol>
+                <li>打开 <span class="path">系统设置 › 通用 › 共享</span>（macOS 12 及更早版本是 <span class="path">系统偏好设置 › 共享</span>）。</li>
+                <li>打开「屏幕共享」开关。</li>
+                <li>在远屏里选这台 Mac，输入 Mac 的用户名和登录密码。</li>
+              </ol>
+              <p>如果在屏幕共享的选项里设了 VNC 密码，也可以只用这个密码连接。注意：通过屏幕共享连接时，剪贴板只支持英文和符号，中文请在电脑上输入。</p>
+            </div>
+          </details>
+          <details>
+            <summary>怎么在 Windows 上打开远程桌面？</summary>
+            <div class="answer">
+              <ol>
+                <li>打开 <span class="path">设置 › 系统 › 远程桌面</span>。</li>
+                <li>打开「远程桌面」开关并确认。</li>
+                <li>在远屏里选这台电脑，输入 Windows 账户和密码；Microsoft 账户填邮箱。</li>
+              </ol>
+              <p>Windows 专业版、企业版和教育版带有远程桌面；家庭版没有这个功能。远程桌面连上后，电脑本机的屏幕会锁上。</p>
+            </div>
+          </details>
+          <details>
+            <summary>不在同一个网络时，怎么连？</summary>
+            <div class="answer">
+              <p>用 tailnet。让电脑和 iPad / iPhone 加入同一个 Tailscale 或 Headscale 网络：</p>
+              <ol>
+                <li>在电脑上安装 Tailscale 客户端并登录你的 tailnet。</li>
+                <li>在远屏里选择接入方式：用手机上的 Tailscale App，或者用「App 内连接」填你的 Headscale 地址并在浏览器里登录。</li>
+                <li>回到电脑列表，tailnet 里的电脑会出现，点一下就能连。</li>
+              </ol>
+              <p>整个过程不用在路由器上做端口转发，也不用把电脑暴露在公网上。</p>
+            </div>
+          </details>
+          <details>
+            <summary>一定要装 Remote Host 吗？</summary>
+            <div class="answer">
+              <p>不用。只用系统自带的屏幕共享或远程桌面就能完整地远程控制电脑。Remote Host 是可选的，装上后能用更好的画质、多显示器与虚拟屏、文件收发等功能。</p>
+            </div>
+          </details>
+          <details>
+            <summary>还有其他问题？</summary>
+            <div class="answer">
+              <p>看 <a href="support.html">支持页面</a>，或者直接发邮件给开发者。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>远屏 Remote Screen · 开发者 Xiaolong Gao</span>
+      <nav>
+        <a href="privacy.html">隐私政策</a>
+        <a href="support.html">支持</a>
+        <a href="mailto:support@example.com">support@example.com</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
