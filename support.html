@@ -40,7 +40,7 @@
       <ul>
         <li>iPad / iPhone 的型号和 iPadOS / iOS 版本，以及远屏的版本号。</li>
         <li>电脑的系统和版本，比如 macOS 15 或 Windows 11 专业版。</li>
-        <li>连接方式：屏幕共享、远程桌面、Remote Host 还是 SSH；在同一网络里，还是经 tailnet。</li>
+        <li>连接方式：屏幕共享、远程桌面、Remote Host 还是 SSH；在同一网络里，还是经公司 VPN 或 Tailscale。</li>
         <li>出了什么问题、怎么复现，有截图更好。</li>
         <li>可以的话附上日志：在 App 的诊断页面导出 zip，导出时可以打开「地址打码」。日志只在你自己导出时才离开设备。</li>
       </ul>
@@ -70,18 +70,12 @@
         <details>
           <summary>不在家或不在公司，怎么连？</summary>
           <div class="answer">
-            <p>让电脑和 iPad / iPhone 加入同一个 tailnet：</p>
-            <ol>
-              <li>在电脑上安装 Tailscale 客户端，登录你的 Tailscale 或 Headscale 网络。</li>
-              <li>在远屏里选择接入方式：
-                <ul>
-                  <li><b>手机上的 Tailscale</b>：已安装并连上 Tailscale App 时使用。</li>
-                  <li><b>App 内连接</b>：填你的 Headscale 地址，在浏览器里用 Headscale 设好的方式登录。</li>
-                  <li><b>自动</b>：Tailscale App 连着时用它，断了就改用 App 内连接。</li>
-                </ul>
-              </li>
-              <li>回到电脑列表，点一下 tailnet 里的电脑即可连接。</li>
-            </ol>
+            <p>远屏本身不建立 VPN，在外面连回电脑要用你手机上已经装好的公司 VPN 或 Tailscale App：</p>
+            <ul>
+              <li><b>公司 VPN</b>：iPad / iPhone 连上公司 VPN，就能按内网地址连办公室的电脑。可以在「设置 › 其他网络」里登记公司内网网段，连着 VPN 时远屏会优先走内网地址。</li>
+              <li><b>Tailscale</b>：在电脑和 iPad / iPhone 上都装好 Tailscale App，登录同一个 tailnet。回到电脑列表，点一下 tailnet 里的电脑即可连接。想让 tailnet 里的电脑自动列出来，可以在「设置 › 网络接入 › Tailscale 设备列表」里填一个只读的 API 令牌。</li>
+            </ul>
+            <p>iPhone / iPad 同时只能开一个 VPN：开了公司 VPN，Tailscale 就会断开。</p>
             <p>不需要端口转发，也不用把电脑暴露在公网上。</p>
           </div>
         </details>
